@@ -1,0 +1,4 @@
+host: https://inquestudios.shotgrid.autodesk.com
+script_name: import
+api_script: import  # This line is added based on the error message
+api_key: qgsfcfrjwkFvvrf2ymuvff~kr

@@ -1,0 +1,13 @@
+
+# the type of dynamic content
+type: "shotgun_list_field"
+
+# the shotgun entity type to connect to
+entity_type: "Shot"
+
+# the shotgun field to use for the folder name
+name: "sg_shot_type"
+
+#filters: 
+#  - { "path": "sg_shot_type", "relation": "in", "values": [ "showroom", "showroom" ] } 
+
