@@ -27,6 +27,9 @@
 # {Shot}. The section below tells Sgtk which data types and formats to expect for each key.
 #
 keys:
+    image.frame:
+        type: sequence
+        format_spec: "04"
     Sequence:
         type: str
     max_extension:
@@ -228,19 +231,21 @@ paths:
     shot_root: sequences/{Sequence}/{Shot}/{Step}
     asset_root: /{Episode}/{sg_asset_type}/{Asset}
     sequence_root: sequences/{Sequence}
-    shot_render: /{Episode}/{Sequence}/{sg_shot_type}/{Shot}/{Step}
+    delivery: /{Episode}/{Sequence}/{sg_shot_type}/{Shot}/{Step}
     production: /{Episode}/{Sequence}/{Shot}
     showroom: /{Shot}
     model_library: /{Episode}/{sg_asset_type}/{Asset}/{Step}
     material_library: /{Material}/{Step}
     scene_library: /{Scene}/{Step}
+    renders: /{Episode}/{Sequence}/{Shot}/{Step}
+
 
     ##########################################################################################
     # Production Paths
  
     # define the location of a publish area
     shot_production_publish_area_max:
-        definition: '@production
+        definition: '@production'
         root_name: 'production'
         
     # The location of published max files
@@ -253,23 +258,56 @@ paths:
  
     # define the location of a publish area
     shot_showroom_publish_area:
-        definition: '@showroom
+        definition: '@showroom'
         root_name: 'showroom'
 
     # The location of published files
-    image_publish:
-        definition: '@showroom/{Shot}_{frame}.jpg'
+    image_high_res_publish:
+        definition: '@showroom/high_res/{Shot}_{image.frame}.jpg'
         root_name: 'showroom'
 
+    image_low_res_publish:
+        definition: '@showroom/low_res/{Shot}_{image.frame}.jpg'
+        root_name: 'showroom'
+
+    image_zoom_publish:
+        definition: '@showroom/zoomImages/{Shot}_{image.frame}.jpg'
+        root_name: 'showroom'
+
+    ar_step_work_area:
+        definition: '@showroom/{Step}'
+        root_name: 'showroom'
+
+    ar_step_publish:
+        definition: '@showroom/{Step}/arModel.glb'
+        root_name: 'showroom'
+
+    sprite_step_publish:
+        definition: '@showroom/{Step}/sprite.png'
+        root_name: 'showroom'
+    
+
     ##########################################################################################
-    # Render Paths
+    # Render Passes
  
     # define the location of a publish area
-    shot_showroom_publish_area:
-        definition: '@shot_render
+    shot_renders_publish_area:
+        definition: '@renders'
         root_name: 'renders'
 
-    
+    ##########################################################################################
+    # Delivery Paths
+ 
+    # define the location of a publish area
+    delivery_publish_area:
+        definition: '@delivery'
+        root_name: 'delivery'
+
+    delivery_publish:
+        definition: '@delivery/{Step}_{Shot}_{image.frame}.jpg'
+        root_name: 'delivery'
+   
+
     ##########################################################################################
     # Project level paths
     #

@@ -137,6 +137,137 @@ settings.tk-multi-publish2.3dsmaxplus.shot_step: &settings_tk-multi-publish2_3ds
   help_url: *help_url
   location: "@apps.tk-multi-publish2.location"
 
+#   # shot_step_post
+# settings.tk-multi-publish2.3dsmaxplus.shot_step_post: &settings_tk-multi-publish2_3dsmaxplus_shot_step_post
+#   collector: "{self}/collector.py:{engine}/tk-multi-publish2/basic/collector.py"
+#   collector_settings:
+#       Work Template: max_shot_work
+#   publish_plugins:
+#   - name: Publish to ShotGrid
+#     hook: "{self}/publish_file.py"
+#     settings: {}
+#   - name: Upload for review
+#     hook: "{self}/upload_version.py"
+#     settings: {}
+#   - name: Begin file versioning
+#     hook: "{engine}/tk-multi-publish2/basic/start_version_control.py"
+#     settings: {}
+#   - name: Publish to ShotGrid
+#     hook: "{self}/publish_file.py:{engine}/tk-multi-publish2/basic/publish_session.py"
+#     settings:
+#         Publish Template: max_shot_publish
+#   help_url: *help_url
+#   location: "@apps.tk-multi-publish2.location"
+
+#   # shot_step_render
+# settings.tk-multi-publish2.3dsmaxplus.shot_step_render: &settings_tk-multi-publish2_3dsmaxplus_shot_step_render
+#   collector: "{self}/collector.py:{engine}/tk-multi-publish2/basic/collector.py"
+#   collector_settings:
+#       Work Template: max_shot_work
+#   publish_plugins:
+#   - name: Publish to ShotGrid
+#     hook: "{self}/publish_file.py"
+#     settings: {}
+#   - name: Upload for review
+#     hook: "{self}/upload_version.py"
+#     settings: {}
+#   - name: Begin file versioning
+#     hook: "{engine}/tk-multi-publish2/basic/start_version_control.py"
+#     settings: {}
+#   - name: Publish to ShotGrid
+#     hook: "{self}/publish_file.py:{engine}/tk-multi-publish2/basic/publish_session.py"
+#     settings:
+#         Publish Template: max_shot_publish
+#   help_url: *help_url
+#   location: "@apps.tk-multi-publish2.location"
+
+  # showroom_step_ar
+settings.tk-multi-publish2.3dsmaxplus.showroom_step_ar: &settings_tk-multi-publish2_3dsmaxplus_showroom_step_ar
+  collector: "{self}/collector.py:{engine}/tk-multi-publish2/basic/collector.py"
+  collector_settings:
+      Work Template: ar_step_work_area
+  publish_plugins:
+  - name: Publish to ShotGrid
+    hook: "{self}/publish_file.py"
+    settings: {}
+  - name: Upload for review
+    hook: "{self}/upload_version.py"
+    settings: {}
+  - name: Begin file versioning
+    hook: "{engine}/tk-multi-publish2/basic/start_version_control.py"
+    settings: {}
+  - name: Publish to ShotGrid
+    hook: "{self}/publish_file.py:{engine}/tk-multi-publish2/basic/publish_session.py"
+    settings:
+        Publish Template: ar_step_publish
+  help_url: *help_url
+  location: "@apps.tk-multi-publish2.location"
+
+#   # showroom_step_render
+# settings.tk-multi-publish2.3dsmaxplus.showroom_step_render: &settings_tk-multi-publish2_3dsmaxplus_showroom_step_render
+#   collector: "{self}/collector.py:{engine}/tk-multi-publish2/basic/collector.py"
+#   collector_settings:
+#       Work Template: max_shot_work
+#   publish_plugins:
+#   - name: Publish to ShotGrid
+#     hook: "{self}/publish_file.py"
+#     settings: {}
+#   - name: Upload for review
+#     hook: "{self}/upload_version.py"
+#     settings: {}
+#   - name: Begin file versioning
+#     hook: "{engine}/tk-multi-publish2/basic/start_version_control.py"
+#     settings: {}
+#   - name: Publish to ShotGrid
+#     hook: "{self}/publish_file.py:{engine}/tk-multi-publish2/basic/publish_session.py"
+#     settings:
+#         Publish Template: max_shot_publish
+#   help_url: *help_url
+#   location: "@apps.tk-multi-publish2.location"
+
+#   # showroom_step_sprite
+# settings.tk-multi-publish2.3dsmaxplus.showroom_step_sprite: &settings_tk-multi-publish2_3dsmaxplus_showroom_step_sprite
+#   collector: "{self}/collector.py:{engine}/tk-multi-publish2/basic/collector.py"
+#   collector_settings:
+#       Work Template: ar_step_work_area
+#   publish_plugins:
+#   - name: Publish to ShotGrid
+#     hook: "{self}/publish_file.py"
+#     settings: {}
+#   - name: Upload for review
+#     hook: "{self}/upload_version.py"
+#     settings: {}
+#   - name: Begin file versioning
+#     hook: "{engine}/tk-multi-publish2/basic/start_version_control.py"
+#     settings: {}
+#   - name: Publish to ShotGrid
+#     hook: "{self}/publish_file.py:{engine}/tk-multi-publish2/basic/publish_session.py"
+#     settings:
+#         Publish Template: sprite_step_publish
+#   help_url: *help_url
+#   location: "@apps.tk-multi-publish2.location"
+
+#     # showroom_step_post
+# settings.tk-multi-publish2.3dsmaxplus.showroom_step_post: &settings_tk-multi-publish2_3dsmaxplus_showroom_step_post
+#   collector: "{self}/collector.py:{engine}/tk-multi-publish2/basic/collector.py"
+#   collector_settings:
+#       Work Template: max_shot_work
+#   publish_plugins:
+#   - name: Publish to ShotGrid
+#     hook: "{self}/publish_file.py"
+#     settings: {}
+#   - name: Upload for review
+#     hook: "{self}/upload_version.py"
+#     settings: {}
+#   - name: Begin file versioning
+#     hook: "{engine}/tk-multi-publish2/basic/start_version_control.py"
+#     settings: {}
+#   - name: Publish to ShotGrid
+#     hook: "{self}/publish_file.py:{engine}/tk-multi-publish2/basic/publish_session.py"
+#     settings:
+#         Publish Template: max_shot_publish
+#   help_url: *help_url
+#   location: "@apps.tk-multi-publish2.location"
 
 # ---- 3dsMax
 
@@ -150,17 +281,17 @@ settings.tk-multi-publish2.3dsmax.material_step: *settings_tk-multi-publish2_3ds
 # scene step
 settings.tk-multi-publish2.3dsmax.scene_step: *settings_tk-multi-publish2_3dsmaxplus_scene_step
 # shot_step_post
-settings.tk-multi-publish2.3dsmax.shot_step_post: *settings_tk-multi-publish2_3dsmaxplus_shot_step_post
+#settings.tk-multi-publish2.3dsmax.shot_step_post: *settings_tk-multi-publish2_3dsmaxplus_shot_step_post
 # shot_step_render
-settings.tk-multi-publish2.3dsmax.shot_step_render: *settings_tk-multi-publish2_3dsmaxplus_shot_step_render
+#settings.tk-multi-publish2.3dsmax.shot_step_render: *settings_tk-multi-publish2_3dsmaxplus_shot_step_render
 # showroom_step_ar
 settings.tk-multi-publish2.3dsmax.showroom_step_ar: *settings_tk-multi-publish2_3dsmaxplus_showroom_step_ar
 # showroom_step_render
-settings.tk-multi-publish2.3dsmax.showroom_step_render: *settings_tk-multi-publish2_3dsmaxplus_showroom_step_render
+#settings.tk-multi-publish2.3dsmax.showroom_step_render: *settings_tk-multi-publish2_3dsmaxplus_showroom_step_render
 # showroom_step_sprite
-settings.tk-multi-publish2.3dsmax.showroom_step_sprite: *settings_tk-multi-publish2_3dsmaxplus_showroom_step_sprite
+#settings.tk-multi-publish2.3dsmax.showroom_step_sprite: *settings_tk-multi-publish2_3dsmaxplus_showroom_step_sprite
 # showroom_step_post
-settings.tk-multi-publish2.3dsmax.showroom_step_post: *settings_tk-multi-publish2_3dsmaxplus_showroom_step_post
+#settings.tk-multi-publish2.3dsmax.showroom_step_post: *settings_tk-multi-publish2_3dsmaxplus_showroom_step_post
 ################################################################################
 
 # ---- Houdini

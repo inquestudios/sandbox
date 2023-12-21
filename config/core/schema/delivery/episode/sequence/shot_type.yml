@@ -6,8 +6,5 @@ type: "shotgun_list_field"
 entity_type: "Shot"
 
 # the shotgun field to use for the folder name
-name: "sg_shot_type"
-
-#filters: 
-#  - { "path": "sg_shot_type", "relation": "in", "values": [ "showroom", "showroom" ] } 
+field_name: "sg_shot_type"
 

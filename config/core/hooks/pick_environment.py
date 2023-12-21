@@ -14,7 +14,6 @@ Hook which chooses an environment file to use based on the current context.
 
 from tank import Hook
 import sgtk
-import os
 
 
 class PickEnvironment(Hook):
@@ -26,7 +25,6 @@ class PickEnvironment(Hook):
 
         # Get the engine instance that is currently running.
         current_engine = sgtk.platform.current_engine()
-        sg = current_engine.shotgun
 
         if context.source_entity:
             if context.source_entity["type"] == "Version":
@@ -50,8 +48,9 @@ class PickEnvironment(Hook):
 
         if context.entity and context.step is None:
             # We have an entity but no step.
-
-            shot_type=sg.find("Shot", [["id", "is", context.entity["id"]]], ["sg_shot_type"])
+            sg = current_engine.shotgun
+            sg_shot=sg.find_one("Shot", [["id", "is", context.entity["id"]]], ["sg_shot_type"])
+            shot_type=sg_shot["sg_shot_type"]
 
             if context.entity["type"] == "Shot"  and not (shot_type == "showroom"):
                 return "shot"
@@ -70,7 +69,9 @@ class PickEnvironment(Hook):
 
         if context.entity and context.step:
             # We have a step and an entity.
-            shot_type=sg.find("Shot", [["id", "is", context.entity["id"]]], ["sg_shot_type"])
+            sg = current_engine.shotgun
+            sg_shot=sg.find_one("Shot", [["id", "is", context.entity["id"]]], ["sg_shot_type"])
+            shot_type=sg_shot["sg_shot_type"]
             
             if context.entity["type"] == "Shot" and context.step["name"] == "DFT":
                 return "shot_step_render"

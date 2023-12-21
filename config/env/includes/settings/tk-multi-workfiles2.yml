@@ -364,29 +364,33 @@ settings.tk-multi-workfiles2.3dsmax.scene_step:
   <<: *settings_tk-multi-workfiles2_3dsmaxplus_scene_step
   hook_scene_operation: "{engine}/tk-multi-workfiles2/basic/scene_operation.py"
 
-settings.tk-multi-workfiles2.3dsmax.shot_step_post:
-  <<: *settings_tk-multi-workfiles2_3dsmaxplus_shot_step_post
+settings.tk-multi-workfiles2.3dsmax.shot_step:
+  <<: *settings_tk-multi-workfiles2_3dsmaxplus_shot_step
   hook_scene_operation: "{engine}/tk-multi-workfiles2/basic/scene_operation.py"
 
-settings.tk-multi-workfiles2.3dsmax.shot_step_render:
-  <<: *settings_tk-multi-workfiles2_3dsmaxplus_shot_step_render
-  hook_scene_operation: "{engine}/tk-multi-workfiles2/basic/scene_operation.py"
+# #settings.tk-multi-workfiles2.3dsmax.shot_step_post:
+#   <<: *settings_tk-multi-workfiles2_3dsmaxplus_shot_step_post
+#   hook_scene_operation: "{engine}/tk-multi-workfiles2/basic/scene_operation.py"
 
-settings.tk-multi-workfiles2.3dsmax.showroom_step_ar:
-  <<: *settings_tk-multi-workfiles2_3dsmaxplus_showroom_step_ar
-  hook_scene_operation: "{engine}/tk-multi-workfiles2/basic/scene_operation.py"
+#settings.tk-multi-workfiles2.3dsmax.shot_step_render:
+#   <<: *settings_tk-multi-workfiles2_3dsmaxplus_shot_step_render
+#   hook_scene_operation: "{engine}/tk-multi-workfiles2/basic/scene_operation.py"
 
-settings.tk-multi-workfiles2.3dsmax.showroom_step_post:
-  <<: *settings_tk-multi-workfiles2_3dsmaxplus_showroom_step_post
-  hook_scene_operation: "{engine}/tk-multi-workfiles2/basic/scene_operation.py"
+# settings.tk-multi-workfiles2.3dsmax.showroom_step_ar:
+#   <<: *settings_tk-multi-workfiles2_3dsmaxplus_showroom_step_ar
+#   hook_scene_operation: "{engine}/tk-multi-workfiles2/basic/scene_operation.py"
 
-settings.tk-multi-workfiles2.3dsmax.showroom_step_render:
-  <<: *settings_tk-multi-workfiles2_3dsmaxplus_showroom_step_render
-  hook_scene_operation: "{engine}/tk-multi-workfiles2/basic/scene_operation.py"
+#settings.tk-multi-workfiles2.3dsmax.showroom_step_post:
+ # <<: *settings_tk-multi-workfiles2_3dsmaxplus_showroom_step_post
+ # hook_scene_operation: "{engine}/tk-multi-workfiles2/basic/scene_operation.py"
 
-settings.tk-multi-workfiles2.3dsmax.showroom_step_sprite:
-  <<: *settings_tk-multi-workfiles2_3dsmaxplus_showroom_step_sprite
-  hook_scene_operation: "{engine}/tk-multi-workfiles2/basic/scene_operation.py"
+#settings.tk-multi-workfiles2.3dsmax.showroom_step_render:
+#  <<: *settings_tk-multi-workfiles2_3dsmaxplus_showroom_step_render
+#  hook_scene_operation: "{engine}/tk-multi-workfiles2/basic/scene_operation.py"
+
+#settings.tk-multi-workfiles2.3dsmax.showroom_step_sprite:
+#  <<: *settings_tk-multi-workfiles2_3dsmaxplus_showroom_step_sprite
+#  hook_scene_operation: "{engine}/tk-multi-workfiles2/basic/scene_operation.py"
 
 
 

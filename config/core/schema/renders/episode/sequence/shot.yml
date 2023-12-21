@@ -24,7 +24,6 @@ entity_type: "Shot"
 # any values starting with $ are resolved into path objects
 filters:
      - { "path": "project", "relation": "is", "values": [ "$renders" ] }
-     - { "path": "sg_shot_type", "relation": "is", "values": [ "$shot_type" ] }
      - { "path": "sg_sequence.Sequence.episode", "relation": "is", "values": [ "$episode" ] }
      - { "path": "sg_sequence", "relation": "is", "values": [ "$sequence" ] }
 
